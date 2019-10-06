@@ -1,0 +1,1044 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Kullanici.master.cs" Inherits="Kullanici" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+                    <style type="text/css">
+                /*<![CDATA[*/
+                /* Site Efektleri */
+                #zoom1 img {
+
+                -webkit-transition: all 1s ease;
+                -moz-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                transition: all 1s ease;
+
+                }
+        
+                #zoom1 img:hover {
+                -moz-transform: scale(1.5);
+                -o-transform: scale(1.5);
+                transform: scale(1.5);
+                -webkit-transform: scale(1.5);
+                -ms-transform: scale(1.5);
+
+                }
+
+                /*]]>*/
+                </style>
+
+                <style type="text/css">
+                    /*<![CDATA[*/
+
+            /* Site Efektleri */
+
+ 
+
+            .transparenz {
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+            opacity: .6;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+            filter: alpha(opacity=60);
+                        height: 394px;
+                        width: 377px;
+                    }
+
+            .transparenz:hover {
+            opacity: 1.0;
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=100);
+
+ 
+
+            }
+
+/*]]>*/
+</style>
+
+
+            <style type="text/css">
+
+        /*<![CDATA[*/
+
+        body {
+
+ 
+
+        background: white url(header-bg.jpg) fixed !important;
+
+ 
+
+        }
+
+ 
+
+        /*]]>*/
+
+        </style>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        /* Site Efektleri */
+        function click(e) {
+            if (!e)
+                e = window.event;
+            if ((e.type && e.type == "contextmenu") || (e.button && e.button == 2) || (e.which && e.which == 3)) {
+                if (window.opera)
+                    window.alert("Üzgünüz: Bu Özellik Devre Dışıdır.");
+                return false;
+            }
+        }
+        if (document.layers)
+            document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = click;
+        document.oncontextmenu = click;
+        //]]>
+</script>
+
+    <meta charset="utf-8">
+    <meta content="Sakarya Uğur Bilişim" name="description">
+    <meta content="Sakarya Uğur Bilişim, sakarya uğur bilişim, sakarya ugur bilisim, Monitör, Laptop, Gamer, Modem, Ram, monitör, laptop, gamer, modem, Emre Uğur, emre uğur, Sakarya, Serdivan," name="keywords">
+    <meta content="Sakarya Uğur Bilişim" name="Emre Uğur">
+
+    <script language="JavaScript1.2" type="text/javascript">
+        //<![CDATA[
+        var message = "SAKARYA UĞUR BİLİŞİM"
+        var message = message + ""
+        i = "0"
+        var temptitle = ""
+        var geschw = "150"
+
+        function titler() {
+            if (!document.all && !document.getElementById)
+                return
+            document.title = temptitle + message.charAt(i)
+            temptitle = temptitle + message.charAt(i)
+            i++
+            if (i == message.length) {
+                i = "0"
+                temptitle = ""
+            }
+            setTimeout("titler()", geschw)
+        }
+
+        window.onload = titler
+        //]]>
+</script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        //whole credits are devoted to orignal author
+        //
+        //Use: Call function goto_top()
+        var goto_top_type = -1;
+        var goto_top_itv = 0;
+
+        function goto_top_timer() {
+            var y = goto_top_type == 1 ? document.documentElement.scrollTop : document.body.scrollTop;
+            //alert(y);
+            var moveby = 15; // set this to control scroll seed. minimum is fast
+
+            y -= Math.ceil(y * moveby / 100);
+            if (y < 0)
+                y = 0;
+
+            if (goto_top_type == 1)
+                document.documentElement.scrollTop = y;
+            else
+                document.body.scrollTop = y;
+
+            if (y == 0) {
+                clearInterval(goto_top_itv);
+                goto_top_itv = 0;
+            }
+        }
+
+        function goto_top() {
+            if (goto_top_itv == 0) {
+                if (document.documentElement && document.documentElement.scrollTop)
+                    goto_top_type = 1;
+                else if (document.body && document.body.scrollTop)
+                    goto_top_type = 2;
+                else
+                    goto_top_type = 0;
+
+                if (goto_top_type > 0)
+                    goto_top_itv = setInterval('goto_top_timer()', 25);
+            }
+        }
+        //]]>
+        </script>
+
+    <title>SAKARYA UĞUR BİLİŞİM</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .arka_plan {
+            background-image: url('/SakaryaUgurBilisim/Resimler/header-bg.jpg');
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+        .auto-style1 {
+            width: 100%;
+            height: 815px;
+        }
+        .orta {
+            text-align: center;
+            font-family: "Yu Gothic";
+            color: #000000;
+            text-decoration: none;
+        }
+        .auto-style3 {
+            text-align: center;
+            height: 3px;
+        }
+        .sag {
+            text-align: right;
+            text-decoration: none;
+        }
+        .auto-style5 {
+            width: 30px;
+            height: 33px;
+        }
+        .anasayfa_renk {
+            color: #FF6600;
+            font-family: "Yu Gothic";
+            font-size: 25px;
+            text-decoration: none;
+        }
+        .baslik {
+            font-family: "Yu Gothic";
+            font-size: 35px;
+            color: #000000;
+            text-decoration: none;
+        }
+        .hosgeldiniz {
+            font-family: "Yu Gothic";
+            font-size: 22px;
+            color: #000000;
+        }
+        .ust {
+            font-family: "Yu Gothic";
+            font-size: 15px;
+            color: #000000;
+            vertical-align: top;
+            text-decoration: none;
+        }
+        .icerik {
+            font-family: "Yu Gothic";
+            font-size: 17px;
+            color: #000000;
+            vertical-align: top;
+            height: 800px;
+            background-color: #EEF5FB;
+            text-decoration: none;
+        }
+        .auto-style7 {
+            text-align: center;
+            font-family: "Yu Gothic";
+            color: #000000;
+            height: 100%;
+            width: 100%;
+        }
+        .auto-style8 {
+            text-align: center;
+            font-family: "Yu Gothic";
+            color: #000000;
+            height: 3px;
+        }
+        .auto-style9 {
+            width: 100%;
+        }
+        .alt_baslik {
+            font-family: "Yu Gothic";
+            font-size: 15px;
+            color: #000000;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+        }
+        .link {
+            font-family: "Yu Gothic";
+            text-decoration: none;
+            color: #000000;
+        }
+        .sol {
+            text-align: left;
+            height: 177px;
+            width: 272px;
+        }
+        a:hover {
+            color: #000000;
+            font-size: 18px;
+            font-family: "Yu Gothic";
+            background-color: #CCCCCC;
+        }
+        .auto-style16 {
+            width: 58px;
+            height: 59px;
+        }
+        .auto-style18 {
+            width: 100%;
+            height: 67%;
+            background-color: #343335;
+            color: #FFFFFF;
+        }
+        .auto-style20 {
+            width: 73px;
+            height: 73px;
+        }
+
+        
+        .auto-style23 {
+            width: 584px;
+            height: 150px;
+        }
+        .auto-style25 {
+            height: 150px;
+        }
+        .auto-style27 {
+            width: 509px;
+            height: 150px;
+        }
+
+        
+        .beyaz_renk {
+            font-family: "Yu Gothic";
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+        .auto-style28 {
+            width: 50%;
+        }
+        .auto-style29 {
+            text-align: justify;
+            vertical-align: baseline;
+            font-size: 12.0pt;
+            font-family: "Times New Roman", serif;
+            margin-left: 0cm;
+            margin-right: 0cm;
+            margin-top: 0cm;
+            margin-bottom: .0001pt;
+            background: white;
+        }
+        .auto-style30 {
+            text-align: justify;
+            vertical-align: baseline;
+            word-spacing: 0px;
+            font-size: 12.0pt;
+            font-family: "Times New Roman", serif;
+            margin-left: 0cm;
+            margin-right: 0cm;
+            margin-top: 0cm;
+            margin-bottom: .0001pt;
+            background: white 0px 0px;
+        }
+
+
+
+            /*<![CDATA[*/
+
+            body {
+
+            background-attachment: fixed !important;
+            background-color: #5E4E40;
+            background-image: url("header-bg.jpg") !important;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-position: center top;
+
+            }
+
+            /*]]>*/
+
+        
+        </style>
+</head>
+<body>
+
+   
+
+    <a onclick="goto_top()" title="Butona Tıklayarak Yukarı Gidiniz..." style="display:scroll;position:fixed;bottom:50px;right:50px;cursor:pointer;"><img src=
+"http://u.jimdo.com/www52/o/s2ba029df7f23bf1c/img/i8f6a9dfa6d38796c/1352888435/std/image.png" alt="" style="height: 73px; width: 70px" /></a>
+    <form id="form1" runat="server">
+    <div class="arka_plan">
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <table cellpadding="0" cellspacing="0" class="auto-style1">
+                <tr>
+                    <td class="auto-style3">
+                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="anasayfa_renk" NavigateUrl="~/AnaSayfa.aspx">ANASAYFA</asp:HyperLink>
+                        &nbsp;|&nbsp;<asp:HyperLink ID="HyperLink2" runat="server" CssClass="link" NavigateUrl="~/Urunler.aspx">ÜRÜNLER</asp:HyperLink>
+                        &nbsp;|&nbsp;<asp:HyperLink ID="HyperLink3" runat="server" CssClass="link" NavigateUrl="~/Hakkimizda.aspx">HAKKIMIZDA</asp:HyperLink>
+                        &nbsp;|
+                        <asp:HyperLink ID="HyperLink4" runat="server" CssClass="link" NavigateUrl="~/Iletisim.aspx">İLETİŞİM</asp:HyperLink>
+                        <br /></td>
+                    <td class="auto-style8">
+                        <img alt="" class="auto-style5" src="Resimler/Telefon.png" /> 05380689607&nbsp;&nbsp; |&nbsp;&nbsp;
+                        <img alt="" class="auto-style5" src="Resimler/Mail.png" /> <a class="link" href="mailto:uguremre348@gmail.com">uguremre348@gmail.com</a><br /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style7" colspan="2"><span class="baslik">SAKARYA UĞUR BİLİŞİM<br />
+                        <br /><span class="hosgeldiniz">HOŞGELDİNİZ<br />YENİ ÜRÜNLER BURADA</span></span></td>
+                </tr>
+            </table>
+        </asp:ContentPlaceHolder>
+    </div>
+        <table cellpadding="0" class="auto-style9">
+            <tr>
+                <td class="orta">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        <span class="baslik">
+                        <br />YENİ ÜRÜNLER</span><br />
+                        <br />
+                        <table align="center" cellpadding="10" cellspacing="10" class="sol">
+                            <tr class="orta">
+                                <td>
+                                    <div id="zoom">
+                                        <a href="Urunler.aspx">
+                                        <img class="transparenz" src="Resimler/Moniitör.png" alt="" width="335" height="350" /></a>
+                                <td>
+                                    <div id="zoom">
+                                        <a href="Urunler.aspx">
+                                        <img class="transparenz" src="Resimler/Laptop.jpg" alt="" width="335" height="350" /></a> </tr>
+                            <tr class="orta">
+                                <td>
+                                    <div id="zoom">
+                                        <a href="Urunler.aspx">
+                                        <img class="transparenz" src="Resimler/Modem.jpg" alt="" width="335" height="330" /></a>
+                                <td>
+                                    <div id="zoom">
+                                        <a href="Urunler.aspx">
+                                        <img class="transparenz" src="Resimler/Kasa Gamer.png" alt="" width="335" height="350" /></a> </tr>
+                        </table>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="link" PostBackUrl="~/Urunler.aspx">ALIŞVERİŞE BAŞLAYIN</asp:LinkButton>
+                    </asp:ContentPlaceHolder>
+                    <br />
+                    <br />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                        <p>
+                            &nbsp;</p>
+                        <table align="center" cellpadding="0" cellspacing="0" class="auto-style28">
+                            <tr>
+                                <td>
+                                    <p class="auto-style29" style="mso-background-themecolor: background1;">
+                                        <b><span class="backcolor17"><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">BİLGİSAYAR NEDİR</span></span></b><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Kullanıcıların girdiği bilgileri veri giriş ünitesine alan, işlem ünitesi ile girilen bilgileri işleyen, elde ettiği sonuçları kendi içinde saklayabilen ve işlenen verilerin sonuçlarını istenildiğinde çıkış ünitesi ile kullanıcıya çıktı olarak verebilen elektronik bir cihazdır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">BİLGİSAYARIN TARİHÇESİ</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;• Abacus(Abaküs): M.Ö. 1000 yıllarında Çinliler tarafından kullanılmaya başlanmıştır.</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">• Pascaline(Paskal makinası): 1642 yılında Blaise Pascal tarafından toplama-çıkarma işlemini yapan ilk mekanik bilgisayar.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">• Leibniz Çarkı: 1670 yılında Wilhelm Leibniz Pascal dört işlem ve karekök hesaplayan makinayı icat etti.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">• Fark Makinası: 1842 yılında Charles Babbage kamaşık problemleri çözebilen Fark makinasını icat etti.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">• İkili Sayı Sistemi: 1854 te George Boole bilgisayarda veri işleyişinin temel mantığı olan ikili sayı sistemini oluşturdu. Yani 0 ve 1 i.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">• MARK 1 : 1937 yılında ilk elektro-mekanik bilgisayar Howard Aiken ve Browne tarafından geliştirildi.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">• ENIAC: 1946 yılında Pensilvanya Üniversitesinde icat edilen ilk sayısal elektronik bilgisayardır. Tarihteki ilk bilgisayar olarak kabul edilir. ENIAC; 150KW gücünde ve 50 ton ağırlığında 167 m2 yer kaplıyordu.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">• UNIVAC: 1951 yılında ilk ticari amaçlı olarak geliştirilen bilgisayar.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">• IBM 7090: 1958 yılında üretilen ilk transistörlü bilgisayar modeli.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">• 1964 yılında ilk birleşik devreli bilgisayarlar oluşturuldu.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;• 1977 yılında Steve Jobs ve Steve Wozniac Apple II yi geliştirdiler. • 1981 yılında ilk kişisel bilgisayarlar(Personal Computer- PC) oluşturuldu. (IBM PC)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">BİLGİSAYAR ÇEŞİTLERİ</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">1. MASAÜSTÜ BİLGİSAYARLAR(DESKTOP)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Monitor, kasa, klavye, mouse ve çevre birimlerden oluşan sistemdir. Günümüzde en çok tercih edilen bilgisayar çeşididir. Çok tercih edilmesinin nedeni güncellenebilirliğinin kolay olması ve fiyatının diğer bilgisayar çeşitlerine göre daha uygun olmasıdır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Örneğin; 64 MB lık bir ekran kartına sahip olan kullanıcı, ihtiyacına göre kullandığı ekran kartını, 256 MB’lık bir ekran kartıyla değiştirebilir. Böylece günümüzdeki bazı programları ve oyunları daha verimli olarak çalıştırabilir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">2.. DİZÜSTÜ BİLGİSAYARLAR(LAPTOP)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Diz üstünde taşınabilen, masaüstü bilgisayarlara oranla daha küçük olan bilgisayar çeşitleridir. Notebook lardan daha büyüktür, fakat ülkemizde Notebook ve Laptop aynı tür bilgisayarlar için kullanılmaktadır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Teknolojinin gelişmesiyle boyutları küçülmeye başlayan bu bilgisayarlar, performans ve işlevsellik bakımından da gün geçtikçe gelişim göstermektedir. (Netbook bilgisayarlar) Laptop alırken ihtiyaçlarınızı karşılayıp karşılamadığına dikkat etmek gerekir.</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Böylece ileride donanımda hissedebileceğiniz eksikliklerin önüne geçmiş olursunuz. Örneğin bir laptopta olmazsa olmaz özellik, DVD ROM aygıtının bulunmasıdır. Centrino işlemcili olmasıda artı bir avantajdır</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">3. CEP BİLGİSAYARLARI(PALM ve POCKETPC)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Evde veya ofiste hazırladığımız dosyaları günlük hayatta her yerde, bir cep telefonu gibi kolayca işlem yapmak için kullanmak istiyorsak o zaman bir el bilgisayarına ihtiyacımız olacaktır. Adında anlaşıldığı üzere bunlar el ve cep bilgisayarlarıdır ve rahatlıkla taşınabilir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">PocketPc lerin çok yüksek sistem ihtiyaçları, donanım çeşitliliği ve yüksek fiyatları onlar için bir dezavantajdır. Palm lerde ise düşük işlemci hızları, düşük sistem ihtiyaçları ve sonuç olarak çok uzun batarya ömrü ve uzun süredir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Geliştirilen bir platform olmanın getirdiği geniş yazılım imkanları bulunmaktadır. PocketPC ler Palm lerden daha üstündür. Palm leri cep telefonunun biraz daha gelişmiş bir türü olarak algılayabiliriz.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Giriş Ünitesi Aygıtları</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">1. Klavye(Keyboard)</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Kullanıcının bilgisayara komut vermesini ve bilgi girişi yapabilmesini sağlayan birimdir. Klavyeler Q ve F klavye olmak üzere ikiye ayrılır. F klavye daktiloya benzer ve Türkçeye en uygun yapıda tasarlanmıştır. Q klavye ise güncel hayatta sıkça kullanılan ve ingilizceyle uyumlu yapıdadır. Ayrıca günümüzde biraz pahalı olsada kablosuz klavyeler kullanılmaktadır. Q klavye üzerinde dört grup tuş takımı vardır:</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">1. Fonksiyon Tuşları</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">F1 den F12 ye kadar olan ve klavyenin üst kısmında bulunan özel amaçlı tuşlardır. Programdan programa özelliği değişmekle birlikte bazı tuşların standart görevi vardır. Mesela F1 tuşu hemen hemen her programda yardım özelliğini çağırır. F2 Kaydetme vs…</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">2.. Standart Tuş Takımı</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">A’dan Z’ye kadar karakterler ve 0’dan 9’a kadar sayılardan oluşan tuşlardır. Sayılar, harflerin üzerindeki sırada yer alırlar.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">3. Sayısal Tuş Takımı</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Bu tuşlar sayısal veri girildiğinde kullanıcıya kullanım kolaylığı sağlamak amacıyla sağ tarafta ayrı bir bölümde toplanmışlardır. Bu bölümde aritmetik operatörler(+,- ,*,/), Enter, . ve Numlock tuşuda bulunur. Laptopta genelde bulunmaz.</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">4. İmleç Kontrol Tuşları:</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">İmleci ekran üzerinde kontrol etmek için kullanılan tuşlardır. Oyunlarda epey işe yaramaktadırlar. Sağ, sol, yukarı, aşağı, Home, End, Page Up ve Page down tuşlarından oluşur. Tuşların bir bölümünün tek başına bir görevi yoktur. Diğer tuşlarla birlikte kullanıldık-larında bir görev yerine getirirler. Bu tuşlar: Shift, Alt-Gr, Alt ve Ctrl tuşlarıdır. Özel görevli tuşlar ise: Esc, Capslock, Enter, SpaceBar, Insert, Delete, BackSpace(), Tab, Windows tuşu ve multimedya tuşlarıdır.</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;2. Fare(Mouse)</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;İmlecin ekran üzerindeki hareketlerini kontrol eden araçtır. Ekran üzerindeki komut düğmelerine tıklayıp aktif hale getirmek, seçmek, taşımak gibi bir çok görevi vardır.</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">4 Temel fare işlemleri: İşaretleme</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Fare işareti ile bir şeyin üzerine gelmek.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Tıklama: Farenin sol tuşuna bir kez basmak.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Çift tıklama: Farenin sol tuşuna kısa aralıklarla iki kez tıklanmasıdır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Sürükleme: Farenin sol tuşunu basılı tutarak imlecin yerinin değiştirilmesidir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Sağ tıklama: Farenin sağ tuşuna bir kez basmak.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Fare çeşitleri</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Kablolu(Toplu, Optic) ve kablosuz mouselar.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">3. Web Cam(web kamerası)</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">İnternete bağlı bilgisayarlar arasında görüntülü haberleşmeyi sağlar. Gerekli kablo bağlantısını yaptıktan ve sürücülerini yükledik-ten sonra kamera kullanıma hazır hale gelir. Günümüzde web kameralar megapixel(MP) kalitesinde usb port üzerinden haberleşir. Webcam ler MSN, Yahoo Messenger, Skype, ICQ gibi bir mesajlaşma programıyla kullanılabileceği gibi, bilgisayara takılı bir digital fotoğraf makinesi gibide kullanılabilir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">4. Mikrofon ve Kulaklık(Microfon, Headset)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Ses kartı bulunan bilgisayarlarda ses kayıtı yapmak için kullanılan mikrofon, aynı zamanda internete bağlı bilgisayarlardada sesli haberleşme sağlayabilen kullanışlı bir cihazdır. Bilgisayarı bir telefon gibi kullanabilirsiniz. Kulaklık ise, bilgisayardan ses çıkışını sadece bizim duymamızı sağlar. Böylelikle bir ofis ortamında başkalarını rahatsız etmeden müzik dinleyebiliriz. Bu yönüyle bir çıkış ünitesi aygıtıdır. Kulaklıklı mikrofon, masa üstü, yakaya takılan cinsten mikrofonlar bulunmaktadır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">5. Joystick ve Gamepad(Oyun çubuğu ve kolu)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Bilgisayar ortamında oynanan oyunlarda kullanılan bir cihazdır. Fare gibi bilgisayarın, hareketleri veya farklı konumları algılamasını sağlar. Günümüzde çok gelişmiş joystickler ve gamepad ler vardır. Titreşimli joystickler ve gamepadler bunlara örnektir. Genelde USB bağlantı noktasından bilgisayara takılırlar.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">6. Tarayıcı(Scanner)</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Tarayıcı, bir resmi veya metni(dergi, gazete, kitap, broşür gibi dökümanlardaki resim ve yazıları) bilgisayar ortamına aktarmak için kullanılan aygıttır. Aktarılan sayfalar resim formatında bilgisayara kaydedilir. Yazıları çevirmek için OCR denen programlar kullanılır. Günümüzde çok yüksek çözünürlüklerde tarayıcılar bulunmaktadır.</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">7. Optik Okuyucu(Optic reader)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Tarayıcılara benzerler. Test tipi sınav sonuçlarının değerlendirilmesinde kullanılırlar. Cevap anahtarları üzerindeki verileri okuyarak bilgisayar ortamına aktarırlar.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Örneğin; ÖSS, LGS gibi sınav sonuçları optik okuyucular yardımıyla tespit edilirler.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Sistem Ünitesi Aygıtları</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">1. Anakart(Mainboard, Motherboard)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Bir bilgisayarın çalışmasında temel rolü oynayan işlemci(CPU), RAM, ROM gibi elemanların bulunduğu , fiberglastan yapılmış baskılı devre kartına anakart denir. Bilgisayara bağlanacak ilave kartlar(ses, modem, TV kartı vs.) anakart üzerinde bulunan slot denen yuvalara bağlanırlar. Sistem ünitesindeki aygıtların veri ve elektrik akışını düzenler. Ayrıca çevre birimler ile sistem arasındaki iletişimi sağlar. Vücudumuzdaki iskelet, kas ve dolaşım sistemlerinin bilgisayar sistemlerindeki karşılığıdır. Kasa içinde sağlamca vidalanmıştır. Günümüzde en çok rağbet gören anakartlar INTEL ve AMD anakartlardır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">2. Merkezi İşlem Birimi(İşlemci, CPU)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;CPU genellikle bilgisayarın beyni olarak tanımlanırlar. Çünkü tüm işlemler CPU tarafından yapılır. CPU verilen komutları anakart üzerindeki veri yolu üzerinden ana bellekten aldıktan sonra kullanıcıdan gelen komutlar doğrultusunda işler ve sonucu çıkış birimi ile kullanıcıya gönderir. Sistemin sağlıklı çalışıp çalışmadığını kontrol eder. Bu nedenle bir bilgisayarın işlem yeteneği ve hızı işlemcisinin yeteneği ve hızıyla doğrudan ilgilidir. CPU hızından bahsedilir-ken MHz ve GHz kavramları kullanılır. Bu hızlar ne kadar yüksekse bilgisayarda o kadar hızlı ve stabil çalışır. Bu birimde yer alan alt üniteler ise, aritmetik-mantık, denetim ve bellek üniteleridir. Aritmetik-Mantık 
+                                        ünitesinde matematik hesaplamalar ile mantıksal karşılaştırmalar yapılır. Denetim Ünitesi ise tüm sistemin iş akışını düzenler; giriş ve çıkış aygıtlarını ve yapılan işlemleri denetler. Günümüzde en çok tercih edilen işlemciler INTEL ve AMD firmalarının işlemcileridir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">3. RAM(Ana Bellek)</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Verilerin işlendiği ve geçici olarak saklandığı yerdir. Herhangi bir işlem yapılırken, diskten okunan bilgiler ve işlem sonuçları gibi, her şey önce buraya yazılır. RAM Bellek, giriş aygıtlarından gelen verileri ve çıkış aygıtlarına gönderilecek bilgileri depolar, ayrıca çalıştırılmakta olan programların bulunduğu ve işlemlerin yapıldığı ortamdır. Bellek, elektromanyetik bir alandır; bu alanda elektrik yükü varsa, bilgi saklanmış anlamına gelmektedir, yoksa o bellek birimi boş, yani bilgi yoktur. RAM in çalışmasını bir öğretmenin ders anlatırken yazı tahtasını kullanmasına ve silip tekrar yazmasına benzetebiliriz. RAM deki bilgiler sistem çalıştığı sürece kullanılırlar. Yani 
+                                        geçici bellektir. Elektrik kesintisinde veya bilgisayar kapatıldığında RAM bellekteki tüm bilgiler silinir. Dolayısıyla bilgileri tekrar kullanmak için kalıcı saklama ortamları olan disket, sabit disk, flash diske kaydetmemiz gerekir. RAM bilgisayarın hızını artıran öğelerdendir. Ne kadar çok RAM o kadar çok performans. 128 MB, 256 MB, 512 MB, 1 GB, 2 GB gibi kapasiteli RAM ler vardır.</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">4. ROM(Sistem Belleği)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;İçerisinde bilgisayarın sistem bilgilerini saklayan anakarta entegre bir devredir. ROM belleğin içeriği RAM gibi herhangi bir elektrik kesintisinde silinmez. Üzerine herhangi bir şey yazılamadığından da veriler bozulmaz. ROM bellekteki bilgiler, anakart üretimi esnasında üretici firma tarafından yerleştirilen programlardır. Bilgisayarın temel işlemlerini yapabilmesini sağlayan bu programlara kısaca BIOS(Temel giriş-çıkış sistemi) adı verilir. BIOS programına, bilgisayar açılırken ekranda görüntülenen Setup giriş tuşu ile ulaşılabilir. Setup a girmek için genelde DEL tuşu veya F2 tuşu kullanılır. Değişik BIOS larda farklılık gösterebilir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">5. Ekran Kartı(Graphics Card)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Bu kart işlenen verileri, kullanıcının anlayacağı biçimde ekrana gönderir. Görevi CPU ile monitör arasındaki iletişimi sağlamaktır. Bilgisayarın yaptığı işlerin sonucunu ekranda görüntüler. Günümüzde 128MB, 256 MB, 512 MB ekran kartı modelleri bulunmaktadır. Bunların bazılarında TV çıkışı da bulunmaktadır. Bu kartlar monitör tipine göre değişmektedir. Yaygın olarak kullanılan görüntü kartları şunlardır: CGA, EGA, VGA, SVGA. Günümüzde en çok tercih edilen SVGA kartlarıdır. Anakart üzerinde PCI, AGP ve PCI Express yuvalarına takılmaktadır. ATI ve NVIDIA ekran kartı üretiminde en iyi olan 2 firmadır. Ekran kartlarının fiyatları işlemci fiyatlarıyla denk, bazen de üzerindedir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">6. Güç Kaynağı(Power supply)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Şehir şebekesinden gelen 220 Volt’luk akımı, bilgisayarın elektronik devrelerinin kullanacağı düşük seviyeli doğru akıma dönüştüren araca güç kaynağı denir. Güç kaynağı üzerinde elektronik devrelerin ısınmalarını engellemek için soğutucu fan bulunur. Güç kaynağından çıkan kablolar anakart ve kasa içinde güçle çalışan diğer aygıtlara dikkatli bir şekilde takılmalıdır. 250W, 300W, 350W, 400W gibi değişik güç kaynakları mevcuttur. Kasanın ihtiyacına göre ve kasanın tipine uygun güç kaynağı takılmalıdır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">7. Kasa(Case)</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Kasalar bilgisayarın en önemli parçalarının yani sitem ünitesindeki tüm parçaların içinde bulunduğu aygıttır. Kullandığınız işlemcinin özelliğine göre kasanın özelliği de değişmelidir. Eğer işlemcinizin hızı yüksekse alacağınız kasanın özellikleride yüksek olmalıdır. Kasalar, vücudumuzun derisi gibidir. Siyah, beyaz ve gri renkte tasarımlar vardır. Günümüzde normal kullanıcılar için 550 Watt ve 5 fanlı kasalar bulunmaktadır. Kasaların fiyatları kalitelerine göre değişmektedir. Üç tip kasa vardır: 1. Slim(yatay) kasa 2. Mini-Midi Tower kasa 3. Big Tower Kasa 26</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Çıkış Ünitesi Aygıtları</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;1. Monitör(Ekran)</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Ekran kartından gelen görüntüyü kullanıcıya sunan elektronik bir cihazdır. CRT, LCD ve TFT olmak üzere üç türü vardır. Günümüzde LCD monitörlerin kullanımı yaygındır. Monitörlerde üç önemli özellik vardır: Boyut, Çözünürlük ve Hız. 27 Ekranda gösterilen her bir renkli noktaya pixel denir. Pixel sayısının artırılması çözünürlüğün artması anlamına gelir. Ve görüntü kaliteside artar. Boyut ise inch(“) ile ifade edilir. Ekranın sol üst köşesinden sağ alt köşesine olan uzunluğu boyutunu belirler. Hız ize Hz(hertz) birimiyle gösterilir. Ekrandaki görüntünün saniyedeki tazelenme oranıdır. Görüntü netliği hız ile sağlanır. Günümüzde dokunmatik ekranlar yaygınlaşmaya başlamıştır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">2. Yazıcı (Printer)</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Bilgisayardaki resim veya yazı dökümanlarını kağıda dökmek ve basmak için kullanılan bir aygıttır. Yazıcıların üç türü vardır:</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">1. Nokta Vuruşlu Yazıcılar (Dot matrix Printers)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Sade yazılar için kullanılır. Fatura kesimi için uygundur. OKI, Panasonic, Epson gibi markalar üretmektedir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">2. Mürekkep Püskürtmeli Yazıcılar (Inkjet Printers)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Genellikle ev kullanıcılarının tercih ettiği, fiyat olarakta uygun olan yazıcılardır. HP, Canon, Xerox..</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">3. Lazer Yazıcılar ( Laser Printers)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Baskı kalitesi yüksek olan, toner kullanan pahalı yazıcılardır. Orta ve büyük ölçekli firmalarda sıklıkla görülür. HP, Minolta … All-in-one denen yazıcılarda mevcuttur.</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">3. Çizici (Plotter)</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Büyük boyutlu kağıtlara, aydıngerlere çizim yapmak amacıyla kullanılan, özellikle mühendislik ve mimarlık alanlarında ayrıntılı planlar ve karmaşık tasarımların baskısını çıkarmada kullanılan özel yazıcılardır. Reklam firmaları da kullanmaktadır.</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">4. Hoparlör (Speaker)</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Bilgisayarda seslerin dinlenebilmesi için ses kartı ile birlikte birde hoparlöre ihtiyaç vardır. Ses kartının yeşil renkli portuna hoparlör çıkışı bağlanarak ses çıkışı sağlanır. Hoparlörler sayısına göre ve çalışma gücüne göre kategorize edilirler. 1+1, 2+1, 5+1 , 7+1 gibi. Günümüzde artık hoparlörler, monitör üzerinde veya kasaya entegre bir şekilde gelmektedir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Saklama Ünitesi Aygıtları</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">1. HARDDISC(Sabitdisk)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Harddiskler bilgisayarımızın bilgi deposudur. Bilgiler dosyalar halinde saklanır. Kapasiteleri ne kadar fazla ise o kadar bilgi saklanabilir. Günümüzde HDD lerin iki çeşidi mevcuttur. Bunlar IDE(eski nesil günümüzde hala kullanılıyor) HDD ler ve SATA(yeni nesil) HDD lerdir. SATA ların hızları IDE lerinkine göre çok daha hızlıdır. Kapasiteleri 40 GB, 80GB, 120GB, 160GB, 200GB, 250GB, 320 GB, 500 GB, 1 TB olabilir. Sabitdisklerin yanında taşınabilir harddiskler mevcuttur. Bunlar kasaların USB girişlerinden bağlanırlar. Şu anki kapasiteleri düşük ama fiyat olarak pahalıdır. Ayrıca server bilgisayarlar için SCSI harddiskler ve yeni laptoplar için SSD lerde mevcuttur.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">2. DİSKET (FLOPPY) VE DİSKET SÜRÜCÜ (FDD)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Disketler bilgi depolamak için kullanılan küçük çaplı manyetik ortamlardır. Disket sürücüler ise, disketlerin içindeki bilgiyi kopyalamamızı yada içindeki bilgiyi bilgisayarımıza aktarmamızı sağlar. Yüksek yoğunluklu bir disketin kapasitesi 1.44 MB’ dır. Günümüz bilgisayarlarında bu kapasite çok düşük kaldığından disket sürücüler kaldırılmıştır. Fakat isteğe göre FDD, kasaya takılabilmektedir. FDD nin yerini kart okuyucular almıştır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">3. OPTİK SÜRÜCÜLER</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">1. CD-ROM VE SÜRÜCÜ</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Bilgi depolamak için kullanılan büyük çaplı taşınabilir manyetik kayıt ortamına CD-ROM denir. Kapasiteleri 650, 700, 750 MB tır. 1 CD yaklaşık olarak 450 disket kapasitesindedir. 700 MB lık bir CD nin içinde bir kütüphanedeki tüm kitaplar sığabilir. Günümüzde disket gibi yeniden yazılabilir CD lerde mevcuttur. Buna rağmen CD-ROM lar yerlerini DVD-ROM lara bırakmaktadırlar. CD-ROM’ların kullanıldığı sürücüye CD-ROM sürücü denir. CD sürücüler ile müzik dinleyebilir, film seyredebilir ya da oyun oynayabiliriz. CD sürücüler CD’deki bilgilerin okunmasıdır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">2.. CD –RW Sürücü</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;CD’deki bilgilerin okunmasını ve CD-R’lere (boş CD) yada CD-RW lere (yeniden yazılabilir CD), bilgi (video,resim,data…) yazılmasını sağlayan sürücülerdir. CD-ROM sürücüsüne benzemekle beraber, üzerlerinde RW ifadesinden anlaşılır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">3. DVD-ROM VE DVD SÜRÜCÜ</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Günümüzde en fazla rağbet gören disk türleridir. Kapasiteleri 4,3 GB - 17 GB arasında değişmektedir. Artık büyük programlar, çok CD li oyunlar ya da filmler DVD olarak piyasaya sürülmektir. DVD teknolojisi sayesinde hem fazla disk kullanmaktan kurtulmuş oluruz hem de daha kaliteli kayıtlar yapabiliriz. DVD-ROM Sürücü DVD lerin ve CD lerin kullanılmasını sağlar, yeni bir sürücüye ihtiyaç duyduğumuzda fiyat/performans değerlendirilmesi göz önüne alınırsa mutlaka DVD sürücüsü tercih etmeliyiz. Genelde Optik Sürücülerde LG markasının ürünleri daha sağlam ve güvenli olmaktadır. Bu nedenle fiyat/performans açısından LG tavsiye edilmekte ve satılmaktadır. Ayrıca pahalı olmasına rağmen 
+                                        taşınabilir, USB noktasından bağlanan DVD RW cihazları da piyasada bulunmaktadır.</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">4. Blue-ray Disc</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Yeni bir teknoloji olan Blueray diskler oldukça yoğun bilgi depolayan ve yakında DVD lerin tahtına oturacak bir teknolojidir. Çift katmanlı bir blue-ray disk 50 GB bilgi depolayabilir. Şu an için pahalı bir medya olmasına rağmen yakın zamanda uygun fiyatlara gelecektir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">5. FLASH DISC (Parmak Bellek)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Bilgi depolamak için kullanılan taşınabilir manyetik ortamlardır. Kapasiteleri;128 ,256 ,512 MB, 1GB, 2GB, 4 GB, 8 GB, 16 BG,128 GB… olabilir. Tak ve çalışır özelliğine sahiptir. Kurulum gerektirmez. Hafif ve kolay kullanımlıdır. USB bağlantı noktasından takılırlar. İçindeki bilgileri isteğiniz bilgisayara kopyalayabilir yada isteğiniz bilgisayardan veri alabilirsiniz Hard diskler kadar hassas değildiler. Bu yüzden rahatça yanımızda taşıyabiliriz. Elbette manyetik ortamdan uzak tutmak gerekir. Mıknatıs en büyük düşmanıdır. Hatta flash disk üzerinden işletim sistemi dahi kullanılabilmektedir. Portable denen taşınabilir ve kurulum gerektirmeyen programlar yüksek yoğunluklu flash 
+                                        disklere gereksinim duyurmaktadır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Diğer Aygıtlar &nbsp;</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">1. SES KARTI (Sound card)</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">&nbsp;Bilgisayarın sesi işlemesini sağlayan genişleme kartıdır. Ses kartları, karta bağlantılanan bir hoparlör aracılığıyla dijital ses elde edilmesini sağlar. Ses kartları 8bit, 32bit, 64bit gibi terimlerle ifade edilir. Bit sayısı artıkça ses kartının ses kalitesi de artar. Ayrıca günümüzde 4+1, 5+1, 6+1… gibi hoparlör sistemlerinin desteklemesi de önemlidir.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">2. MODEMLER</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Bilgisayarın telefon hattı üzerinden internete bağlanmasını sağlayan aygıtlara modem denir. Modem sayesinde bilgisayarlar şehir içi, şehirlerarası, uluslar arası haberleşebilirler. Modemler iki çeşittir: FAXMODEM, ADSL MODEM.. Fax-modem: Bilgisayar ortamında dijital olarak bulunan bilgileri anologa çeviren telefon hattı üzerinden başka bir bilgisayara gönderir veya telefon hattı üzerinden gönderilen anolog sinyali dijital veriye dönüştürecek verinin bilgisayara ortamına alınmasını sağlayarak iki bilgisayarın iletişim kurmasını sağlar. Günümüzde fax-modemler düşük hızları, bağlı olduğu süre içerisinde telefonları meşgul etme ve yüksek telefon faturaları nedeni ile tercih 
+                                        edilmektedir. Zorunlu durumlarda kullanılmaktadır. ADSL Modem; Günümüzde hızla ADSL kullanıcısı artmaktadır. Çünkü 24saat, 365 gün bağlanma, kesilme gibi sorunlar olmadan, sabit ücret ödeyerek, aynı kalitede, değişmeyen yüksek hızla internet’te olmamızı ve aynı anda aynı telefon hattı üzerinden telefonla konuşma yapabilmemizi sağlar. Farklı hız seçenekleri vardır. Hız yükseldikçe fiyat artar. 512,1024, 2048…Kbps. ADSL modem alırken ihtiyacımızı iyi belirlemeli ona göre modem almalıyız. Çünkü piyasada tek ya da dört portlu, USB ya da ETHERNET’ li ya da wireless destekli modem gibi bir çok çeşidi vardır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">3. ETHERNET KARTI</span></b></span></span><span style="font-size:
+18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Bir binada birden fazla bilgisayar varsa ethernet kartı ile bu bilgisayarları birbirine bağlayabilir ve aralarında bilgi alış verişi ve mesaj gönderebilmeleri sağlanır. Ayrıca bir önceki konuda işlediğimiz ADSL modellerden ethernet olanını kullanmamız için bilgisayarınızda ethernet kartının bulunması lazımdır. Ethernet kartı bilgisayarlar arası iletişim kanalıdır. Bunların kablosuz modelleride mevcuttur.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">4. TV KARTI</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">TV kartı bilgisayar ekranında televizyon izleyebilmeyi sağlar. Günümüzde dijital ve analog TV kartları vardır. Dijital TV leri seyretmek için dijital TV kartınızın olması gerekmektedir. Aşağıdaki resimde dijital TV kartı vardır. Çoğu TV kartının radyo kartı özelliği de bulunmaktadır. Ürünle birlikte yazılım programı da verilmektedir. Bunların dahili ve harici modelleri bulunmaktadır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">5. UPS</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Elektrik enerjisini içerisindeki akülerde depolayan ve elektrik kesilmesi durumunda, akülerde depoladığı enerjiyi, şebeke gerilimine çeşitli yöntemlerle çeviren UPS (kesintisiz güç kaynağı) cihazları, üzerlerine bağlı bulunan cihazların kesintisiz elektrik ile çalışmalarını sağlar. Genelde UPS’ lerin akü kapasiteleri düşük olduğundan dolayı elektriğin kesilmesi durumunda sağladığı enerji süresi çok kısadır. Bu yüzden UPS’ler genellikle bilgisayar ve donanımlarının elektrik kesilmesi durumunda, verilerin saklanabilmesini sağlamak ve sağlıklı bir şekilde cihazları kapatabilmek için kullanılır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">6. BLUETOOTH</span><span style="color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D"><o:p></o:p></span></b></span></span></p>
+                                    </span>
+                                    <p class="auto-style29" style="mso-background-themecolor: background1;">
+                                        <b><span class="backcolor17"><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Bluetooth, kablo bağlantısını ortadan kaldıran kısa mesafe radyo frekansı (RF) teknolojisinin adıdır. Bluetooth bilgisayar,çevre birimleri ve diğer cihazların birbirleri ile kablo bağlantısı olmadan görüş doğrultusu dışında bile olsalar haberleşmelerine olanak sağlar. Bluetooth teknolojisi 2,4 Ghz frekansı bandında çalışmakta olup, ses ve veri iletimi yapabilmektedir. 721 Kbps’a kadar veri aktarabilen bluetooth destekli cihazların etkin olduğu mesafe yaklaşık 10 metredir. Bluetooth telsiz teknolojisi cihazlar arasında senkronizasyon sağlamak ve veri aktarmak amacı ile kullanılabilir. Bluetooth teknolojisi GSM telefonlarını kullanarak masaüstü ve mobile cihazlarınızı şirket networklerine veya internete bağlayabilir, dosya alışverişi yapmasına olanak sağlar.</span></span></b><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31">&nbsp;<o:p></o:p></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">7. WİRELES</span></b></span></span><span style="font-size:18.0pt;
+font-family:&quot;Arial&quot;,sans-serif;color:#222A31"><o:p></o:p></span></span></p>
+                                    <p class="auto-style30" style="mso-background-themecolor: background1; outline: 0px; pointer-events: auto; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+                                        <span style="outline: 0px;
+background-position-x:0px;background-position-y:0px"><span class="backcolor17"><span style="outline: 0px;background-position-x:0px;background-position-y:0px"><b><span style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: white; border: none windowtext 1.0pt; mso-border-alt: none windowtext 0cm; padding: 0cm; background: #C49A6D">Wireless fidelity kelimelerinin ilk iki harfi kullanılarak ortaya çıkarılmış bir kısaltma wi-fi basitçe kablosuz network bağlantısı olarak tanımlanabilir. İnternete herhangi bir kablolu bağlantı olmadan otel odasından, yataktan, odanızdaki koltuktan, seminer salonunda bulunduğunuz yerden, havaalanında bekleme salonundan kablosuz internete erişmenizi sağlar. Wireless niteliğine sahip bilgisayar parçalarıyla bu tür bir network kurmak ve kullanmak mümkündür. Evde, iş yerinde, okul kampüslerinde, havaalanlarında, kafeteryalarda ve diğer halka açık alanlarda kullanılabilecek bir sistemdir. Wi-Fi, IEEE 802.11g, 802.11b yada 802.11 a diye bilinen telsiz teknolojilerini kullanır. Bu 
+                                        frekansları kullanmak için herhangi bir lisans alınması da gerekimez. Hele bazı cihazlar her iki standartıda destekliyorlar ki bu da evde yada iş yerinde kullanılabilecek kablosuz bir ağın müjdesidir. Günümüzde artık yaygın olarak kullanılmaya başlayan bir teknoloji olan wireless, kullanıcılara kolay internet erişimi sağlamakla birlikte kablo bağımlılığını da ortadan kaldırmaktadır. Son teknoloji notebooklarda wireless, standart bir donanım olarak kullanıcıların hizmetine sunulmaktadır.</span></b></span></span><span style="font-size:18.0pt;font-family:&quot;Arial&quot;,sans-serif;color:white;mso-themecolor:
+background1"><o:p></o:p></span></span></p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>
+                            &nbsp;</p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                
+                <td class="alt_baslik">
+                    <table align="center" cellpadding="10" cellspacing="10" class="auto-style18">
+                        <tr>
+                            <td style="font-weight: 700" class="auto-style23">
+                                <span class="beyaz_renk">SAKARYA UĞUR BİLİŞİM<br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                </span>
+                                <div id="zoom1">
+        <div>
+            <img src="Facebook-icon.png" alt="" width="200" height="100" />
+        </div>
+                                    <a href="https://www.facebook.com/emre.ugur.921230">
+                                <img alt="" class="auto-style20" src="Resimler/Facebook-icon.png" /><br /></a>
+                                <br />
+                                    <a href="Iletisim.aspx">
+                                <img alt="" class="auto-style16" src="Resimler/Phone.png" /><br /></a>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                            </td>
+                            <td class="auto-style27"><span class="anasayfa_renk">
+                                BİZE ULAŞIN<br />
+                                <br />
+                                Adres : </span><span class="beyaz_renk">Vatan Mahallesi Karaman Sokak No7 
+                                </span><span class="anasayfa_renk"><br />
+                                <br />
+                                Tel : </span><span class="beyaz_renk">0538 068 9607</span><span class="anasayfa_renk"><br />
+                                <br />
+                                Email : <a class="link" href="https://mail.google.com:uguremre348@gmail.com">uguremre348@gmail.com</a><br />
+                                <br />
+                                Web : <a class="link" href="http://www.sakaryaugurbilisim.com">www.sakaryaugurbilisim.com</a><br />
+                                <br />
+                                <br />
+                                </span><span class="beyaz_renk">Bu Site Emre Uğur 
+                                <br />
+                                Tarafından Yapılmıştır. 
+                                <br />
+                                Tüm Hakları Saklıdır. (c) 2019</span><span class="anasayfa_renk"><br />
+                                <br />
+                            </td>
+                            <td class="auto-style25"><span class="beyaz_renk">ABONE OL</span><br />
+                                <br />
+                                <br />
+                                <span class="beyaz_renk">Ürünlerimizin indirimi ve etkinliklerinden 
+                                <br />
+                                haberdar olmak istiyorsanız
+                                <br />
+                                email adresinizi girmeniz&nbsp;
+                                yeterli olacaktır.</span><br />
+                                <br />
+                                <br />
+                                <br />
+                                    <input type="email" name="email" placeholder="Emailinizi Giriniz" required style="height: 43px; width: 351px" /><br />
+&nbsp;<br />
+                                    <input type="submit" value="ABONE OL" class="anasayfa_renk" style="width: 359px"; color: #000000; cursor: pointer; />
+                                    
+                                    <br />
+                                <br />
+                                <br />
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+                    </td>
+            </tr>
+        </table>
+    </form>
+    </form>
+</body>
+</html>
